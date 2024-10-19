@@ -1,0 +1,90 @@
+﻿Contrôle Continu – GitHub.
+
+
+Vous répondrez à chacune des questions sur ce fichier texte. 
+Pour chacune d'entre elles, vous effectuerez la tache demandée et vous écrirez la ou les commandes nécessaires sous la question. 
+
+
+1. A l'aide du terminal, créez un dossier "CC_nom_prenom" dans lequel vous initialiserez un repository git.
+
+
+QUESTIONS DE COURS.
+2. Qu'est ce que Git et à quoi sert-il ? 
+    - Git est un logiciel de gestion de versions. Il permet de suivre l'évolution d'un projet informatique en gardant une trace de toute les manipulation des fichiers ou dossier. Il permet de traivailler seul ou en groupe pour un meme projet.
+3. Comparez Git et GitHub.
+    - Git est un logiciel de gestion de versions donc on doit executer des commande sur notre machine pour l'utiliser tandis que GitHub est une platforme en ligne qui permet de stocker des projets et de traivailler en groupe.
+4. Donnez les deux espaces dans lesquels peuvent se trouver les fichiers avant de réaliser un commit.
+    - Les fichier peuvent ce trouver dans l'working directory ou dans la staging area.
+
+
+QUESTIONS PRATIQUES. 
+
+
+5. Après avoir répondu aux questions de cours, ajoutez ce fichier dans votre repo et faites votre premier commit.
+    - git init
+    - git add controle_continu.txt
+    - git commit -m "first commit"
+    
+6. Créez une branche feature et placez vous dessus. Donnez les 3 méthodes de création de branche.
+    - git checkout -b feature
+    - git branch feature
+    - git switch -c feature
+
+7. Ajoutez un fichier texte film.txt à votre dossier et écrivez votre film préféré à l'intérieur. 
+    - echo ""> film.txt
+8. Ajoutez un fichier texte serie.txt à votre dossier et écrivez votre série préférée à l'intérieur. 
+    - echo ""> serie.txt
+9. Faites un commit en ajoutant uniquement le fichier film.txt à votre commit.
+    - git add film.txt
+    - git commit -m "add film.txt"
+10. Ajoutez un fichier citation.txt dans lequel vous écrirez votre citation préférée.
+    - echo ""> citation.txt
+11. Faites un commit qui ajoute toutes les modifications.
+    - git add .
+    - git commit -m "add all files"
+
+12. Sur une nouvelle branche add_images, créez un fichier "ignore.txt" et ignorez le. Vous ferez ensuite un capture d'écran qui montre que le 
+fichier est bien ignoré et vous ajouterez cette capture dans un dossier "images". Vous pourrez ensuite commit les changements.
+    - git branch
+          feature
+        * master
+    - git switch -c add_images
+        Switched to a new branch 'add_images'
+    - git add .
+    - git status
+        On branch add_images
+        Changes to be committed:
+        (use "git restore --staged <file>..." to unstage)
+                new file:   .gitignore
+                new file:   images/screen for ignore file.png
+
+    - git commit -m 'screen shot for ignoring file' 
+
+13. Faites une capture d'écran de vos branches et ajoutez la au dossier image et faites un commit.
+    - git add .\images\
+    - git commit -m 'liste of all branch'
+
+14. Mergez vos branches feature et add_images dans master. 
+    - git merge feature
+    - git merge add_images
+
+15. Faites une capture d'écran de l'historique de vos commit sur master, ajoutez la au dossier image et faites un commit. 
+    - git add .\images\
+    - git commit -m 'add history log image'
+
+16. Créez un repo en ligne dans lequel vous pousserez votre dossier. 
+    - git remote add origin git@github.com:BenakilAmine/learning-git.git
+    - git push origin maadter
+17. Sur GitHub, créez un nouveau fichier origin.txt sur la branche master. Puis tirez le dans votre repo local.
+    - git pull origin master
+18. Créez une nouvelle branche feedback, ajoutez un fichier feedback.txt dans lequel vous écrirez votre feedback sur le cours
+(vous ne serez ni avantagé ni pénalisé selon le feedback). Créez ensuite une Pull Request et mergez la dans master depuis GitHub.
+    - git switch -c feedback
+    - echo ""> feedback.txt
+    - git add feedback.txt
+    - git commit -m "add feedback.txt"
+    - git push origin feedback
+
+Lien de votre repo GitHub : 
+Vous laisserez votre repo distant en public et écrirez le lien dans ce fichier que vous rendez sur classroom.
+Lien github => https://github.com/BenakilAmine/learning-git
